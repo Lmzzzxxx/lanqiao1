@@ -18,8 +18,8 @@
 			s[i] = s[i - 1] + a[i];
 		} 
 //example
-int addsum(int a[],int s[],int n){
-    s[0]=0;
+void addsum(int a[],int s[],int n){
+	s[0] = 0;
     for(int i = 1;i <= n;i++){
         s[i] = s[i-1] + a[i];
     }
@@ -38,5 +38,11 @@ int addsum(int a[],int s[],int n){
 		//给以(x1, y1)为左上角，(x2, y2)为右下角的子矩阵中的所有元素加上C
 		//S[x1, y1] += C, S[x2 + 1, y1] -= C, S[x1, y2 + 1] -= C, S[x2 + 1, y2 + 1] += C
 	 
+//example
+void getDiff(int a[],int d[],int n){
+    for(int i;i<=n;i++){
+        d[i]=a[i] - a[i-1];
+    }
+}
 
 
