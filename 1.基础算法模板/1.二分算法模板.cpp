@@ -5,7 +5,8 @@
 //1.整数二分计算模板
 
 //我把二分区间[l, r]分成了两类，影响的是下面l与r的更新,使用下面哪种就按经验来了 
-//一类是[l, mid]和(mid, r]
+
+//一类是[l, mid]和(mid, r]，也就是将区间划分为 [l, mid] 和 [mid + 1, r]，第一个满足条件的数
 
 int bsearch_1(int s[], int l, int r){ //传入二分数组和左右端点 
 	while(l < r){
@@ -17,7 +18,7 @@ int bsearch_1(int s[], int l, int r){ //传入二分数组和左右端点
 	}
 	return l; //注意跳出循环时，l = mid 
 } 
-//二类是[l, mid)和[mid, r]
+//二类是[l, mid)和[mid, r]，也就是将区间划分为 [l, mid - 1] 和 [mid, r]，最后一个满足条件的数
 int bsearch_2(int s[], int l, int r){
     while(l < r){
         // 注意：这里必须 + 1 补齐，实现向上取整
@@ -40,4 +41,5 @@ int bsearch_2(int s[], int l, int r){
 	}
 	return l;
  }
+
 
