@@ -12,6 +12,7 @@ func backtrack(选择列表,路径):
 //example
 //输入的数组是nums
 vector<vector<int>> res;
+void backTrace(vector<int>& nums, int start, vector<int>& temp);//提前声明
 vector<vector<int>> subsets(vector<int>& nums) {
     if(nums.empty()) return res;
     // 记录走过的路径
