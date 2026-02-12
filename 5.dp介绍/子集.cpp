@@ -23,10 +23,9 @@ vector<vector<int>> subsets(vector<int>& nums) {
 
 void backTrace(vector<int>& nums, int start, vector<int>& temp){
     res.push_back(temp);
-
     for(int i = start; i < nums.size(); i++){
         temp.push_back(nums[i]); // 做选择
         backTrace(nums, i + 1, temp); //回溯
         temp.pop_back(); //删除最后一个
     }
-}
+}//不包含重复的
